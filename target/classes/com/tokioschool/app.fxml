@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="PanelBack" maxHeight="800" maxWidth="600" minHeight="800" minWidth="600" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tokioschool.AppController">
+   <children>
+      <AnchorPane fx:id="PanelBar" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #fca311;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="107.0" layoutY="-14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="110.0" layoutY="10.0" onMouseClicked="#onOptionsButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_options.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#onNoteButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon_note.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="310.0" layoutY="10.0" onMouseClicked="#onReminderButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon_calendar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#onTaskListButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon_tasklist.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#onSearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon_search.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="210.0" layoutY="10.0" onMouseClicked="#onExitButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon_exit.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelOptions" layoutX="162.0" layoutY="471.0" prefHeight="670.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="LabelOptions" layoutX="50.0" layoutY="110.0" text="OPTIONS" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelLanguage" text="LANGUAGE:" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="110.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelTheme" layoutX="10.0" layoutY="10.0" text="THEME:" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelInformation" layoutX="245.0" layoutY="40.0" text="PROGRAM INFORMATION" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelVersion" layoutX="50.0" layoutY="160.0" text="VERSION: 0.1" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="470.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelInfo1" layoutX="50.0" layoutY="480.0" text="THE PROGAM IS IN PHASE BETA" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="520.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="ComboBoxLanguage" focusColor="#ffffff00" layoutX="192.0" layoutY="101.0" prefHeight="25.0" prefWidth="200.0" promptText="LANGUAGE" style="-fx-background-color: #fca311;" unFocusColor="#ffffff00" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="110.0" />
+            <JFXComboBox fx:id="ComboBoxTheme" focusColor="#ffffff00" layoutX="230.0" layoutY="110.0" prefHeight="25.0" prefWidth="200.0" promptText="THEME" style="-fx-background-color: #fca311;" unFocusColor="#ffffff00" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="160.0" />
+            <Label fx:id="LabelInfo2" layoutX="50.0" layoutY="530.0" text="SEND SUGGESTIONS TO:  JAIROCAMPOSRUIZ1991@GMAIL.COM" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="570.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonApplyChanges" layoutX="312.0" layoutY="197.0" mnemonicParsing="false" onMouseClicked="#onApplyChangesButton" style="-fx-background-color: #fca311;" text="APPLY CHANGES" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <JFXToggleButton fx:id="ToggleButtonNotificationDelete" layoutX="320.0" layoutY="195.0" size="12.0" text="NOTIFICATION DELETE" textFill="#fca311" toggleColor="#fca311" toggleLineColor="#fcb84b" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXToggleButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelNote" layoutX="172.0" layoutY="359.0" prefHeight="670.0" prefWidth="600.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="LabelTitleNote" layoutX="10.0" layoutY="10.0" text="TITLE:" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="TextTitleNote" focusColor="#fca311" prefWidth="380.0" promptText="WRITE THE TITLE HERE" style="-fx-text-fill: #fca311;" unFocusColor="WHITE" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="104.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="TextAreaNote" focusColor="TRANSPARENT" prefHeight="300.0" prefWidth="520.0" promptText="WRITE THE NOTE HERE..." style="-fx-border-color: #fca311; -fx-border-radius: 10; -fx-border-width: 5; -fx-text-fill: white; -fx-padding: 10;" unFocusColor="#13203b00" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="220.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextArea>
+            <ImageView fitHeight="70.0" fitWidth="70.0" onMouseClicked="#onSaveNoteButton" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="550.0">
+               <image>
+                  <Image url="@../../images/icon_save.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LabelNote" layoutX="60.0" layoutY="120.0" text="NOTE" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="PanelReminder" layoutX="172.0" layoutY="481.0" prefHeight="670.0" prefWidth="600.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <DatePicker fx:id="SelectDateReminder" promptText="SELECT DATE" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="160.0" />
+            <Label fx:id="LabelReminder" layoutX="70.0" layoutY="130.0" text="REMINDER" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelDateReminder" layoutX="10.0" layoutY="10.0" text="DATE:" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelTitleReminder" layoutX="20.0" layoutY="20.0" text="TITLE:" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="110.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="TextTitleReminder" focusColor="#fca311" layoutX="10.0" layoutY="10.0" prefWidth="380.0" promptText="WRITE THE TITLE HERE" style="-fx-text-fill: #fca311;" unFocusColor="WHITE" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="104.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="TextAreaReminder" focusColor="#13203b00" layoutX="10.0" layoutY="10.0" prefHeight="300.0" prefWidth="520.0" promptText="WRITE THE NOTE HERE..." style="-fx-border-color: #fca311; -fx-border-radius: 10; -fx-border-width: 5; -fx-text-fill: white; -fx-padding: 10;" unFocusColor="#13203b00" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="230.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextArea>
+            <ImageView fitHeight="70.0" fitWidth="70.0" onMouseClicked="#onSaveReminderButton" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="550.0">
+               <image>
+                  <Image url="@../../images/icon_save.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="PanelTaskList" layoutX="10.0" layoutY="140.0" prefHeight="670.0" prefWidth="600.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="LabelTaskList" layoutX="80.0" layoutY="140.0" text="TASK LIST" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" onMouseClicked="#onMarkTaskButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="37.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_mark.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#onUnMarkTaskButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="37.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_unmark.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="90.0" layoutY="20.0" onMouseClicked="#onDeleteTaskButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="37.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_delete.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="160.0" layoutY="20.0" onMouseClicked="#onNewTaskButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="37.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_new.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <JFXListView fx:id="ListViewTaskList" layoutX="10.0" layoutY="10.0" style="-fx-background-color: Transparent; -fx-border-color: #fca311; -fx-border-width: 5;" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="110.0" />
+            <JFXButton fx:id="ButtonResetTask" layoutX="311.0" layoutY="43.0" onMouseClicked="#onResetDailyTasksButton" style="-fx-background-color: #fca311;" text="RESET DAILY TASKS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="PanelNewTask" layoutX="10.0" layoutY="140.0" prefHeight="670.0" prefWidth="600.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="LabelNewTask" layoutX="80.0" layoutY="140.0" text="NEW TASK" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="90.0" layoutY="20.0" onMouseClicked="#onDeleteNewTaskButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="37.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_unmark.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="160.0" layoutY="20.0" onMouseClicked="#onSaveNewTaskButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="37.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_save.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <JFXTextField fx:id="TextTitleNewTask" focusColor="#fca311" layoutX="10.0" layoutY="10.0" prefWidth="0.0" promptText="WRITE THE TITLE HERE" style="-fx-text-fill: #fca311;" unFocusColor="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXCheckBox fx:id="CheckBoxNewTask" checkedColor="#fca311" layoutX="38.0" layoutY="292.0" text="REPEAT THE TASK DAILY" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="LabelTitleNewTask" layoutX="20.0" layoutY="20.0" text="TITLE:" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="150.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelSearch" layoutX="20.0" layoutY="150.0" prefHeight="670.0" prefWidth="600.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="LabelSearch" layoutX="90.0" layoutY="150.0" text="SEARCH" textFill="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="TextSearchTitle" focusColor="#fca311" layoutX="20.0" layoutY="20.0" onKeyPressed="#searchTitle" onKeyReleased="#searchTitle" prefWidth="300.0" promptText="SEARCH FOR TITLE" style="-fx-text-fill: #fca311;" unFocusColor="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXListView fx:id="ListViewSearch" layoutX="10.0" layoutY="10.0" style="-fx-background-color: Transparent; -fx-border-color: #fca311; -fx-border-width: 5;" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="110.0" />
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" onMouseClicked="#onDeleteSearchButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="37.0" right="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../images/icon_delete.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="201.0" layoutY="20.0" onMouseClicked="#onViewSearchButton" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon_view.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="37.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <JFXTextField fx:id="TextSearchDescription" focusColor="#fca311" layoutX="260.0" layoutY="50.0" onKeyPressed="#searchDescription" onKeyReleased="#searchDescription" prefWidth="300.0" promptText="SEARCH FOR DESCRIPTION" style="-fx-text-fill: #fca311;" unFocusColor="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children></AnchorPane>
+      <ImageView fx:id="ArrowNote" fitHeight="30.0" fitWidth="60.0" layoutX="30.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="100.0">
+         <image>
+            <Image url="@../../images/icon_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ArrowReminder" fitHeight="30.0" fitWidth="60.0" layoutX="40.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="100.0">
+         <image>
+            <Image url="@../../images/icon_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ArrowOptions" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0">
+         <image>
+            <Image url="@../../images/icon_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ArrowSearch" fitHeight="30.0" fitWidth="60.0" layoutX="60.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="100.0">
+         <image>
+            <Image url="@../../images/icon_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ArrowTaskList" fitHeight="30.0" fitWidth="60.0" layoutX="50.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
+         <image>
+            <Image url="@../../images/icon_arrow.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="PanelShow" prefHeight="670.0" prefWidth="600.0" style="-fx-background-color: #14213d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="TextShowTitle" editable="false" focusColor="#fca311" layoutX="20.0" layoutY="20.0" prefWidth="520.0" style="-fx-text-fill: #fca311;" unFocusColor="#fca311" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="TextShowDescription" editable="false" focusColor="#13203b00" layoutX="20.0" layoutY="20.0" prefHeight="400.0" prefWidth="520.0" style="-fx-border-color: #fca311; -fx-border-radius: 10; -fx-border-width: 5; -fx-text-fill: white; -fx-padding: 10;" unFocusColor="#13203b00" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextArea>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#onSearchButtonClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="40.0">
+               <image>
+                  <Image url="@../../images/icon_unmark.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="TextShowDate" editable="false" focusColor="#fca311" layoutX="30.0" layoutY="30.0" prefWidth="200.0" style="-fx-text-fill: #fca311;" unFocusColor="#fca311" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="60.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="50.0" layoutY="570.0" onMouseClicked="#onDeleteShowButton" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="140.0">
+               <image>
+                  <Image url="@../../images/icon_delete.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="PanelShowButtonEdit" fitHeight="70.0" fitWidth="70.0" layoutX="160.0" layoutY="570.0" onMouseClicked="#onEditShowButton" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="240.0">
+               <image>
+                  <Image url="@../../images/icon_edit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="PanelShowButtonSave" fitHeight="70.0" fitWidth="70.0" layoutX="250.0" layoutY="570.0" onMouseClicked="#onSaveShowButton" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="240.0">
+               <image>
+                  <Image url="@../../images/icon_save.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="DateShowEdit" layoutX="10.0" layoutY="10.0" promptText="SELECT DATE" visible="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="360.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelWarning" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fca311; -fx-background-radius: 20; -fx-border-color: #000000; -fx-border-width: 10; -fx-border-radius: 12;" visible="false" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <Button fx:id="ButtonDeleteNote" layoutX="93.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#onAcceptButtonForNote" style="-fx-background-color: #ffffff;" text="DELETE" visible="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="70.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ButtonCancelDelete" layoutX="302.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#onCancelButton" style="-fx-background-color: #ffffff;" text="CANCEL" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="70.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="LabelQuestionNotify" layoutX="192.0" layoutY="60.0" text="Are you sure you want to delete?" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonDeleteTask" layoutX="90.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#onAcceptButtonForTask" style="-fx-background-color: #ffffff;" text="DELETE" visible="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="70.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelState" prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #9e2a2b;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="LabelState" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+com\tokioschool\comparator\ComparatorNoteForDate.class
+com\tokioschool\db\NoteDao.class
+com\tokioschool\domain\Task.class
+com\tokioschool\PrimaryController.class
+com\tokioschool\properties\PropertiesAPP.class
+com\tokioschool\domain\Note.class
+com\tokioschool\SecondaryController.class
+module-info.class
+com\tokioschool\Launcher$1.class
+com\tokioschool\util\DateUtil.class
+com\tokioschool\thread\TaskShowAlert.class
+com\tokioschool\Launcher.class
+com\tokioschool\thread\DownloadListTasks.class
+com\tokioschool\db\TaskDao.class
+com\tokioschool\thread\DownloadListNotes.class
+com\tokioschool\AppController.class
+com\tokioschool\Launcher$2.class

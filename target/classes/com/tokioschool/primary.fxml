@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="PanelBack" alignment="CENTER" onMouseMoved="#applyChanges" prefHeight="800.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #14213d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tokioschool.PrimaryController">
+   <children>
+      <AnchorPane prefHeight="619.0" prefWidth="560.0">
+         <children>
+            <Label fx:id="LabelTitle" prefHeight="100.0" text="WELCOME TO THE APP TASKLIST" textFill="#fca311" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonAccept" layoutX="187.0" layoutY="422.0" onAction="#switchToApp" style="-fx-background-color: #fca311;" text="CONTINUE" textFill="WHITE" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="LabelLine1" layoutX="55.0" layoutY="60.0" prefHeight="100.0" text="PLESE PLACE THE WINDOW WHERE YOU WANT AND" textFill="#fca311" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabelLine2" layoutX="55.0" layoutY="210.0" prefHeight="0.0" text="PRESS CONTINUE TO FIX IT." textAlignment="CENTER" textFill="#fca311" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
